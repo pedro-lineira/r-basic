@@ -1,3 +1,5 @@
+#Resultado 3/12/2025 12:27:40
+
 
 calcularFecha = function(añoInicio, mesInicio, segundosasumar){
 
@@ -12,8 +14,8 @@ calcularFecha = function(añoInicio, mesInicio, segundosasumar){
   
   segundosAno = function(ano){
     segundos=0;
-    if(!esBisiesto(ano)){segundos=365*segdia}
-    else {segundos=366*segdia};
+    if(!esBisiesto(ano)){segundos=365*segDia}
+    else {segundos=366*segDia};
     segundos  
   }
   
@@ -59,7 +61,7 @@ calcularFecha = function(añoInicio, mesInicio, segundosasumar){
         totseg = totseg%%segDia;
         horaFinal=totseg%/%segHora;
         totseg = totseg%%segHora;
-        minutoFinal=ceiling(totseg/60);
+        minutoFinal=totseg%/%60;
         segundoFinal=totseg%%60;
         break;
       }
@@ -79,12 +81,13 @@ calcularFecha = function(añoInicio, mesInicio, segundosasumar){
   
 }
 
+
 segundosasumar = 250000000
 anoInicio = 2018
 mesInicio = 1
 
-
+#3/12/2025 12:27:40
 calcularFecha(anoInicio, mesInicio, segundosasumar)
 
-
-#7*365*segDia + 2*segDia + 334*segDia + 2*segDia + 12*60*60 + 26*60 + 40
+segDia=24*60*60
+7*365*segDia + 2*segDia + 334*segDia + 2*segDia + 12*60*60 + 26*60 + 40
